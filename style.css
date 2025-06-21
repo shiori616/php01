@@ -1,0 +1,253 @@
+/* CSS for the survey form - Start */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Interフォントを優先、フォールバック */
+    background-color: #ffeef2; /* 優しいピンク系の背景 */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: #4a4a4a; /* テキストの色を少し柔らかく */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 35px 45px; /* パディングを少し増やす */
+    border-radius: 20px; /* 角をさらに丸く */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 影を柔らかく、大きく */
+    max-width: 850px; /* 最大幅を少し広げる */
+    width: 100%;
+    border: 1px solid #ffdae3; /* 柔らかい枠線 */
+}
+
+h1 {
+    color: #ff6f9f; /* 可愛らしいピンク系の色 */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px; /* 少し大きく */
+    border-bottom: 3px solid #ffb3c1; /* 柔らかいボーダー */
+    padding-bottom: 12px;
+    letter-spacing: 0.5px; /* 文字間隔を少し開ける */
+}
+
+p {
+    color: #666666;
+    line-height: 1.7; /* 行の高さを少し広げて読みやすく */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-section {
+    margin-bottom: 35px; /* セクション間の余白を広げる */
+    padding: 20px;
+    border: 1px solid #ffe3e9; /* 柔らかい枠線 */
+    border-radius: 15px; /* 角を丸く */
+    background-color: #fff9fb; /* フォームセクションの背景色 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 影を柔らかく */
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #7b4f9a; /* 可愛らしい紫系の色 */
+    font-size: 18px; /* 少し大きく */
+}
+
+/* Fieldset/Legend for question 2 and 3 */
+.form-section fieldset {
+    border: none; /* デフォルトのfieldsetの枠線を削除 */
+    padding: 0;
+    margin: 0;
+}
+
+.form-section legend {
+    display: block; /* labelと同じようにブロック要素として扱う */
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #7b4f9a; /* labelと同じ色 */
+    font-size: 18px; /* labelと同じフォントサイズ */
+    padding: 0; /* デフォルトのパディングを削除 */
+    width: 100%; /* 親要素に合わせる */
+}
+
+
+.form-section input[type="text"],
+.form-section textarea,
+.form-section select { /* select要素もスタイル適用 */
+    width: calc(100% - 20px);
+    padding: 12px; /* パディングを少し増やす */
+    border: 1px solid #ffcfe3; /* 柔らかい枠線 */
+    border-radius: 8px; /* 角を丸く */
+    font-size: 16px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* ホバー/フォーカス時のアニメーション */
+    appearance: none; /* デフォルトの矢印を非表示 */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%237b4f9a" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* カスタム矢印 */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+.form-section input[type="text"]:focus,
+.form-section textarea:focus,
+.form-section select:focus { /* select要素もスタイル適用 */
+    border-color: #ff99bb; /* フォーカス時の色 */
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 153, 187, 0.6); /* 柔らかいシャドウ */
+    background-color: #fffafc;
+}
+
+.radio-group {
+    padding-top: 5px; /* legendとの間隔を調整 */
+}
+
+.radio-group label {
+    display: inline-block;
+    margin-right: 25px; /* 余白を広げる */
+    font-weight: normal;
+    color: #5a5a5a;
+    cursor: pointer;
+    padding: 5px 0; /* タップしやすく */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px; /* 余白を広げる */
+    transform: scale(1.2); /* 少し大きく */
+    accent-color: #ff99bb; /* ラジオボタンの色 */
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* ボーダーを重ねない */
+    border-spacing: 0 5px; /* 行間のスペース */
+    margin-top: 20px;
+    font-size: 15px;
+    border-radius: 10px; /* テーブル全体の角を丸く */
+    overflow: hidden; /* 角丸を適用 */
+}
+
+table th, table td {
+    border: none; /* 個々のセルのボーダーをなくす */
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background-color: #ffebf0; /* 可愛らしいヘッダー背景色 */
+    color: #ff6f9f;
+    font-weight: bold;
+    border-bottom: 1px solid #ffd4e0;
+}
+
+table td {
+    background-color: #fffafc; /* セルの背景色 */
+    border-bottom: 1px solid #ffeeee;
+}
+
+table tr:last-child td {
+    border-bottom: none; /* 最後の行の下線はなし */
+}
+
+table td:first-child {
+    text-align: left;
+    font-weight: bold;
+    color: #7b4f9a; /* 項目名を可愛らしい紫に */
+}
+
+.category-title {
+    background-color: #ffe3f0 !important; /* カテゴリタイトルの背景色 */
+    font-weight: bold;
+    text-align: left !important;
+    padding-left: 20px !important;
+    color: #e65287 !important; /* カテゴリタイトルの色 */
+    border-bottom: 2px solid #ffc2d1 !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+table input[type="radio"] {
+    transform: scale(1.1);
+    accent-color: #ff99bb; /* テーブル内のラジオボタンも可愛らしい色に */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 18px; /* パディングを増やす */
+    background: linear-gradient(to right, #ff99bb, #ffc2d1); /* グラデーションボタン */
+    color: white;
+    border: none;
+    border-radius: 15px; /* 角を丸く */
+    font-size: 20px; /* 大きく */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(255, 153, 187, 0.4); /* 柔らかい影 */
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(to right, #ffc2d1, #ff99bb); /* ホバーでグラデーションを反転 */
+    box-shadow: 0 7px 20px rgba(255, 153, 187, 0.6);
+    transform: translateY(-2px); /* 少し上に浮き上がるアニメーション */
+}
+
+.thanks-message {
+    text-align: center;
+    margin-top: 40px; /* 余白を広げる */
+    font-size: 18px;
+    color: #888888;
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px 30px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    table th, table td {
+        min-width: 90px; /* Adjust as needed */
+    }
+    table td:first-child {
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 20px 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .form-section label, .form-section legend { /* labelとlegendのフォントサイズを調整 */
+        font-size: 16px;
+    }
+    button[type="submit"] {
+        padding: 15px;
+        font-size: 18px;
+    }
+    .radio-group label {
+        margin-right: 15px;
+    }
+}
+/* CSS for the survey form - End */

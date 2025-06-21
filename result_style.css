@@ -1,0 +1,161 @@
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffeef2; /* アンケートページと合わせた優しいピンク系の背景 */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: #4a4a4a;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 35px 45px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* テーブルが広がるので最大幅を広げる */
+    width: 100%;
+    border: 1px solid #ffdae3;
+    overflow: hidden; /* 角丸の適用を確実にするため */
+}
+
+h1 {
+    color: #ff6f9f;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    border-bottom: 3px solid #ffb3c1;
+    padding-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+p {
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.no-data-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #999;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.table-wrapper {
+    overflow-x: auto; /* 横スクロールを可能にする */
+    margin-bottom: 30px;
+    border-radius: 15px; /* テーブルラッパーの角を丸く */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 影を柔らかく */
+    border: 1px solid #ffe3e9; /* 柔らかい枠線 */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* ボーダーを重ねる */
+    /* border-spacing: 0; */ /* border-collapseを使うので不要 */
+    margin: 0; /* table-wrapperがパディングを持つため */
+    font-size: 14px; /* 小さめのフォントで多くの情報を表示 */
+    min-width: 900px; /* 少なくともこの幅を確保して、横スクロールを促す */
+}
+
+table th, table td {
+    border: 1px solid #ffdae3; /* 柔らかいボーダー */
+    padding: 12px 15px;
+    text-align: left; /* テキストは左寄せ */
+    vertical-align: top; /* セル内でテキストを上寄せ */
+}
+
+table th {
+    background-color: #ffebf0; /* 可愛らしいヘッダー背景色 */
+    color: #ff6f9f;
+    font-weight: bold;
+    white-space: nowrap; /* ヘッダーの折り返しを防ぐ */
+}
+
+table td {
+    background-color: #fffafc; /* セルの背景色 */
+    word-break: break-word; /* 長い単語でも折り返す */
+}
+
+/* 偶数行の背景色を変更して見やすくする */
+table tbody tr:nth-child(even) {
+    background-color: #fff6f9;
+}
+
+/* ホバー時に行の背景色を変更 */
+table tbody tr:hover {
+    background-color: #ffe3ed;
+    transition: background-color 0.3s ease;
+}
+
+.back-link-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-link-container a {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #ff99bb, #ffc2d1);
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 153, 187, 0.4);
+}
+
+.back-link-container a:hover {
+    background: linear-gradient(to right, #ffc2d1, #ff99bb);
+    box-shadow: 0 7px 20px rgba(255, 153, 187, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments for overall layout */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px 30px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    table {
+        font-size: 13px;
+    }
+    table th, table td {
+        padding: 10px;
+    }
+    .back-link-container a {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 20px 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    table {
+        font-size: 12px;
+    }
+    table th, table td {
+        padding: 8px;
+    }
+    .back-link-container a {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
